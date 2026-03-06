@@ -15,6 +15,7 @@ app.use(cors({
 }));
 
 // Define routes
+app.get('/', (req, res) => res.send('API is running...'));
 app.use('/api/auth', require('./routes/auth'));
 
 const PORT = process.env.PORT || 5000;
